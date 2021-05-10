@@ -1,0 +1,35 @@
+todo应用  笔记
+1.关于webpack path path是nodeJs 基本包为处理路径 
+2. __dirname  代表配置文件所在的地址
+上述两点 参照菜鸟应用 菜鸟教程地址：https://www.runoob.com/nodejs/nodejs-path-module.html
+3.webpack 将细小碎片的js文件合并成一个然后减少http请求， 
+webpack  打包文件=》浏览器引入导出文件=》执行所需操作的一个过程 
+
+
+url-loader  =>options
+[name] 文件本来的名字
+[ext] 文件的本来拓展名 
+
+
+webpack 的loader 是一层一层的 当写   use: ["style-loader", "css-loader", "stylus-loader"], 时候
+1.stylus-loader处理stylus代码完成候变成css代码=>
+2.css-loader处理css代码=>
+3.style-loader将处理完成的代码写入页面当中去
+
+cross-env 依赖包 配置环境变量必须要的
+
+webpack配置项：
+ target:'web', 编译目标 web平台
+ devSever.overlay 配置错误是否出现再页面上
+ devSever.open  devSever打包完成后自动打开浏览器
+ devSever.hot  热更新 只改变当前正在更改组件的内容
+ new webpack.DefinePlugin 配置完成后可以在js里使用process.env判断开发环境
+ 
+
+
+
+
+ 课程纠错：
+ package.json 中的 webpack-dev-server 在写写脚本的时候应该写成 webpack serve
+ webpack  中的devtool 配置 写法已经改变 #cheap-module-eval-source-map 改成 eval-cheap-module-source-map
+ 
